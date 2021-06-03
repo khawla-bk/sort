@@ -1,0 +1,29 @@
+PROCEDURE sortone(VAR x,y : INTEGER)
+
+VAR
+   w : INTEGER;
+BEGIN
+  w := x;
+  x := y;
+  y := w;
+  
+END
+
+PROCEDURE sorttwo(VAR arr : ARRAY_OF INTEGER())
+VAR
+   i,j,small_indx, : INTEGER;
+   
+   
+BEGIN
+  
+   FOR i FROM 0 TO n-1   DO
+       small_indx := i;
+       FOR j  FROM 0  TO arr.length-i-1  DO
+           IF (arr[small_indx]<arr[j]) THEN
+               small_indx := j;
+           END_IF
+       END_FOR
+
+    sortone(arr[small_indx],arr[i])
+   END_FOR
+END
